@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Heading from './components/Heading';
+import Grid from './components/Grid';
 
 function App() {
+  const [start, setStart] = useState(false);
+  const [target, setTarget] = useState(false);
+  const [search, setSearch] = useState(false);
+  const [wall, setWall] = useState(false);
+
+  const startHandler = (data) => {
+    if(data === 'true')
+      setStart(true);
+    if(data === 'false')
+     setStart(false);
+  }
+
+  const targetHandler = (data) => {
+    if(data === 'true')
+      setTarget(true);
+    if(data === 'false')
+      setTarget(false);
+  }
+  const searchHandler = () => {
+    setSearch(true);
+  }
+
+  const drawWallHandler = ()=>{
+    setWall(true);
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+       <Heading onStart={startHandler} onTarget={targetHandler} onSearch={searchHandler} onWall={drawWallHandler}/>
+       <Grid start={start} target={target} onStart={startHandler} onTarget={targetHandler} search={search} wall={wall}/>
+    </React.Fragment>
+
   );
 }
 
