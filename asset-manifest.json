@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PathFindByBFS/static/css/main.3057df7d.css",
+    "main.js": "/PathFindByBFS/static/js/main.d99e0469.js",
+    "index.html": "/PathFindByBFS/index.html",
+    "main.3057df7d.css.map": "/PathFindByBFS/static/css/main.3057df7d.css.map",
+    "main.d99e0469.js.map": "/PathFindByBFS/static/js/main.d99e0469.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3057df7d.css",
+    "static/js/main.d99e0469.js"
+  ]
+}
